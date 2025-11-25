@@ -47,7 +47,7 @@ def cylinderForm():
     return render_template("cylinder.html")
 
 
-# flask route for the sphere calculations page → NOW FIXED
+# flask route, fixed sphere function --> was broken. 
 @app.route("/sphere", methods=["GET", "POST"])
 def sphereForm():
     if request.method == "POST":
@@ -60,4 +60,5 @@ def sphereForm():
 # more code here for the rest of the calculators: cube, cone, etc. (you can add later)
 
 if __name__ == '__main__':  # more flask plumbing so the environment starts correctly
+
     app.run(host='0.0.0.0', debug=True)
